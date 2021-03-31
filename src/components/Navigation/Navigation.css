@@ -2,7 +2,6 @@
   position: fixed;
   width: 100%;
   max-width: 520px;
-  /* height: 100vh; */
   top: 0;
   right: -100%;
   bottom: 0;
@@ -64,4 +63,11 @@
   width: 32px;
   height: 32px;
   background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='7.16016' y='9.28249' width='3' height='22' transform='rotate(-45 7.16016 9.28249)' fill='white'/%3E%3Crect x='22.7168' y='7.16117' width='3' height='22' transform='rotate(45 22.7168 7.16117)' fill='white'/%3E%3C/svg%3E%0A");
+}
+
+@media screen and (max-width: 610px) {
+  .menu__close {
+    top: 14px;
+    right: 14px;
+  }
 }
