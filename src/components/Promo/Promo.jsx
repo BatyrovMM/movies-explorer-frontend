@@ -1,24 +1,17 @@
-import './App.css';
+import './Promo.css';
+import promoLogo from '../../images/promo__logo.svg'
 
-function App() {
+function Promo() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <section className="promo">
+        <div className="wrapper wrapper_promo">
+          <h1 className="promo__title">Учебный проект студента факультета Веб-разработки.</h1>
+          <img src={promoLogo} alt="логотип" className="promo__logo"/>
+        </div>
+      </section>
+    </>
   );
 }
 
-export default App;
+export default Promo;

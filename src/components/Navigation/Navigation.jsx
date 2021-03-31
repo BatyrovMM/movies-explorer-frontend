@@ -1,24 +1,35 @@
-import './App.css';
+import { Link, NavLink } from 'react-router-dom';
+import './Navigation.css';
 
-function App() {
+function Navigation({ isOpen, onClose }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className={`menu ${isOpen ? 'menu_active' : ''}`}>
+        <div className="wrapper wrapper_menu">
+          <nav className="menu__navigation">
+            <Link to="/" className="menu__navigation-link">Главная</Link>
+            <NavLink 
+              className="menu__navigation-link" 
+              to='/movies' 
+              activeClassName="menu__navigation-link_active"
+            >Фильмы
+            </NavLink>
+            <NavLink 
+              className="menu__navigation-link" 
+              to='/saved-movies' 
+              activeClassName="menu__navigation-link_active"
+            >Сохранённые фильмы
+            </NavLink>
+          </nav>
+          <Link to="/profile" className="section__profile section__profile_menu">
+            <span className="section__profile-text">Аккаунт</span>
+            <span className="section__profile-logo"></span>
+          </Link>
+        </div>
+        <button className="menu__close" onClick={onClose}></button>
+      </div>
+    </>
   );
 }
 
-export default App;
+export default Navigation;

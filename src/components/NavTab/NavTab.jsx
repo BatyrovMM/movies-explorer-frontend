@@ -1,24 +1,29 @@
-import './App.css';
+import { Link, NavLink } from 'react-router-dom';
+import './NavTab.css';
 
-function App() {
+function NavTab() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <nav className="header__nav-tabs">
+        <NavLink 
+          className="header__nav-tabs-link" 
+          to='/movies' 
+          activeClassName="header__nav-tabs-link_active"
+        >Фильмы
+        </NavLink>
+        <NavLink 
+          className="header__nav-tabs-link" 
+          to='/saved-movies' 
+          activeClassName="header__nav-tabs-link_active"
+        >Сохранённые фильмы
+        </NavLink>
+      </nav>
+      <Link to="/profile" className="section__profile">
+        <span className="section__profile-text">Аккаунт</span>
+        <span className="section__profile-logo"></span>
+      </Link>
+    </>
   );
 }
 
-export default App;
+export default NavTab;

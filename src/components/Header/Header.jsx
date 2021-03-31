@@ -1,24 +1,39 @@
-import './App.css';
+import { Link } from 'react-router-dom';
+import headerLogo from '../../images/section__logo.png';
+import NavTab from '../NavTab/NavTab';
+import './Header.css';
 
-function App() {
+function Header({onPage, handleMenu}) {
+  let whatPage;
+
+  if (onPage === '/') {
+    whatPage = (
+      <nav className="header__sign">
+        <Link to='/signup' className="header__signup">Регистрация</Link>
+        <Link to='/signin' className="header__signin">Войти</Link>
+      </nav>
+    )
+  } else {
+    whatPage = (
+      <>
+        <NavTab />
+        <button className="header__menu-button" onClick={handleMenu}></button>
+      </>
+    )
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header className={`header ${onPage === '/' ? '' : 'header_main'}`}>
+        <div className="wrapper wrapper_header">
+          <Link to='/'>
+            <img className="header__logo" src={headerLogo} alt="logotype"/>
+          </Link>
+          {whatPage}
+        </div>
       </header>
-    </div>
+    </>
   );
 }
 
-export default App;
+export default Header;

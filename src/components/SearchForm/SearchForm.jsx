@@ -1,24 +1,21 @@
-import './App.css';
+import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
+import './SearchForm.css';
 
-function App() {
+function SearchForm() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <section className="search-form">
+        <div className="wrapper wrapper_search-form">
+          <form className="search-form__form">
+            <input type="search" placeholder="Фильм" className="search-form__input"/>
+            <button type="submit" className="search-form__button"></button>
+          </form>
+          <FilterCheckbox />
+          <div className="search-form__line"></div>
+        </div>
+      </section>
+    </>
   );
 }
 
-export default App;
+export default SearchForm;

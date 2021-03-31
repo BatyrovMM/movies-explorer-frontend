@@ -1,38 +1,109 @@
-.App {
+.techs {
+  background-color: #272727;
+}
+
+.wrapper_techs {
+  margin: 100px auto;
+}
+
+.techs__title {
+  margin: 90px auto 0;
+  max-width: 600px;
+  font-size: 50px;
+  line-height: 58px;
   text-align: center;
+  letter-spacing: -0.04em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.techs__subtitle {
+  margin: 25px auto 0;
+  max-width: 460px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -0.04em;  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.techs__table {
+  width: 100%;
+  max-width: 690px;
+  margin: 100px auto 0;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(84px, 1fr));
+}
+
+.techs__item {
+  width: 100%;
+  padding: 22px 0;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: -0.04em;
+  background: #303030;
+  border-radius: 10px;
+  transition: .4s linear;
+}
+
+.techs__item:hover {
+  background-color: #3DDC84;
+  color: #303030 ;
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper_techs {
+    margin: 90px 0;
+  }
+  
+  .techs__title {
+    margin: 80px auto 0;
+  }
+  
+  .techs__subtitle {
+    margin: 20px auto 0;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  
+  .techs__table {
+    margin: 80px auto 0;
+    max-width: 648px;
+  }
+  
+  .techs__item {
+    font-size: 12px;
+    line-height: 15px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 610px) {
+  .wrapper_techs {
+    margin: 70px auto;
+    padding: 0 18px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .techs__title {
+    margin: 60px 0 0;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  
+  .techs__subtitle {
+    font-size: 11px;
+    line-height: 16px;
+  }
+  
+  .techs__table {
+    width: 60%;
+    max-width: 500px;
+    min-width: 178px;
+    margin: 50px auto 0;
+  }
+  
+  .techs__item {
+    width: 100%;
+    padding: 22px 0;
+    font-size: 12px;
+    line-height: 15px;
   }
 }

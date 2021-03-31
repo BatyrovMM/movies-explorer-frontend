@@ -1,24 +1,30 @@
-import './App.css';
+import Header from '../Header/Header';
+import './Profile.css';
 
-function App() {
+function Profile({handleMenu}) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header handleMenu={handleMenu} />
+      <section className="profile">
+        <div className="wrapper wrapper_profile">
+          <h1 className="profile__hello">Привет, Виталий!</h1>
+          <form className="profile__form">
+            <div className="profile__form-table">
+              <label className="profile__form-label" htmlFor="profile__form-name">Имя</label>
+              <input className="profile__form-input" id="profile__form-name" type="text" placeholder="Имя"/>
+            </div>
+            <div className="profile__form-line"></div>
+            <div className="profile__form-table">
+              <label className="profile__form-label" htmlFor="profile__form-email">E-mail</label>
+              <input className="profile__form-input" id="profile__form-email" type="email" placeholder="Почта"/>
+            </div>
+            <button type="submit" className="profile__form-edit">Редактировать</button>
+          </form>
+          <button className="profile__exit">Выйти из аккаунта</button>
+        </div>
+      </section>
+    </>
   );
 }
 
-export default App;
+export default Profile;

@@ -1,24 +1,18 @@
-import './App.css';
+import './MoviesCard.css';
 
-function App() {
+function MoviesCard() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <div className="movies-card">
+    <img className="movies-card__image" src="" alt=""/>
+    <div className="movies-card__info">
+      <div className="movies-card__info-top">
+        <p className="movies-card__name">33 слова о дизайне</p>
+        <button className="movies-card__likes"></button>
+      </div>
+      <p className="movies-card__length">1ч 47м</p>
     </div>
+  </div>
   );
 }
 
-export default App;
+export default MoviesCard;

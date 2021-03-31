@@ -1,24 +1,26 @@
-import './App.css';
+import './Techs.css';
 
-function App() {
+function Techs() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <section className="techs">
+      <div className="wrapper wrapper_techs">
+        <p className="section-name section-name_techs">Технологии</p>
+        <h2 className="techs__title">7 технологий</h2>
+        <p className="techs__subtitle">На курсе веб-разработки мы освоили технологии, которые применили в дипломном проекте.</p>
+        <div className="techs__table">
+          <div className="techs__item">HTML</div>
+          <div className="techs__item">CSS</div>
+          <div className="techs__item">JS </div>
+          <div className="techs__item">React</div>
+          <div className="techs__item">Git</div>
+          <div className="techs__item">Express.js</div>
+          <div className="techs__item">mongoDB</div>
+        </div>
+      </div>
+    </section>
+    </>
   );
 }
 
-export default App;
+export default Techs;
