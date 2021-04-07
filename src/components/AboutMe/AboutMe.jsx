@@ -1,4 +1,5 @@
 import './AboutMe.css';
+import zaglushka from '../../images/zaglushka.jpg';
 
 function AboutMe() {
   return (
@@ -14,11 +15,11 @@ function AboutMe() {
                 Я родился и живу в Саратове, закончил факультет экономики СГУ. У меня есть жена и дочь. Я люблю слушать музыку, а ещё увлекаюсь бегом. Недавно начал кодить. С 2015 года работал в компании «СКБ Контур». После того, как прошёл курс по веб-разработке, начал заниматься фриланс-заказами и ушёл с постоянной работы.
               </p>
               <div className="about-me__links">
-                <a href="https://ru-ru.facebook.com/" className="about-me__link">Facebook</a>
-                <a href="https://github.com/BatyrovMM" className="about-me__link">Github</a>
+                <a target="_blank" rel="noreferrer" href="https://ru-ru.facebook.com/" className="about-me__link">Facebook</a>
+                <a target="_blank" rel="noreferrer" href="https://github.com/BatyrovMM" className="about-me__link">Github</a>
               </div>
             </div>
-            <img src="" alt="" className="about-me__image"/>
+            <img src={zaglushka} alt="zaglushka" className="about-me__image"/>
           </div>
         </div>
       </section>

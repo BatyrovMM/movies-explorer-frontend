@@ -10,7 +10,7 @@ function SavedMovies({handleMenu}) {
     <>
       <Header handleMenu={handleMenu} />
       <SearchForm />
-      <MoviesCardList />
+      <MoviesCardList isSaved={true}/>
       <Footer />
     </>
   );

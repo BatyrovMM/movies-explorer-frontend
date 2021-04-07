@@ -11,7 +11,7 @@ function Movies({handleMenu}) {
     <>
       <Header handleMenu={handleMenu} />
       <SearchForm />
-      <MoviesCardList />
+      <MoviesCardList isSaved={false}/>
       <Footer />
     </>
   );
