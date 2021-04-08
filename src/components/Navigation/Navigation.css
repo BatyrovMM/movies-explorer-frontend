@@ -1,0 +1,73 @@
+.menu {
+  position: fixed;
+  width: 100%;
+  max-width: 520px;
+  top: 0;
+  right: -100%;
+  bottom: 0;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1s linear, opacity 1s linear, right .5s linear;
+  background-color: #202020;
+  display: flex;
+}
+
+.menu_active {
+  right: 0;
+  pointer-events: all;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.1s linear, right .5s linear;
+}
+
+.wrapper_menu {
+  max-width: 340px;
+  margin: 160px auto 90px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.menu__navigation {
+  width: 100%;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.menu__navigation-link {
+  width: fit-content;
+  margin: 30px auto 0;
+}
+
+.menu__navigation-link:first-of-type {
+  margin: 0 auto;
+}
+
+.menu__navigation-link_active {
+  padding: 0 0 4px;
+  border-bottom: 2px solid #FFFFFF;
+}
+
+.section__profile.section__profile_menu {
+  margin: auto auto 0;
+  display: flex;
+}
+
+.menu__close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 32px;
+  height: 32px;
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='7.16016' y='9.28249' width='3' height='22' transform='rotate(-45 7.16016 9.28249)' fill='white'/%3E%3Crect x='22.7168' y='7.16117' width='3' height='22' transform='rotate(45 22.7168 7.16117)' fill='white'/%3E%3C/svg%3E%0A");
+}
+
+@media screen and (max-width: 610px) {
+  .menu__close {
+    top: 14px;
+    right: 14px;
+  }
+}

@@ -1,0 +1,127 @@
+/* .sign {
+
+} */
+
+.wrapper_sign {
+  max-width: 400px;
+  margin: 70px auto;
+  padding: 0;
+}
+
+.sign__logo {
+  width: 38px;
+  height: 38px;
+}
+
+.sign__title {
+  margin: 25px 0 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.sign__form {
+  margin: 40px 0 0;
+}
+
+.sign__form-label {
+  width: 100%;
+  margin: 20px 0 0;
+  font-size: 10px;
+  line-height: 12px;
+  color: #8B8B8B;
+}
+
+.sign__form-label:first-of-type {
+  margin: 0;
+}
+
+.sign__form-input {
+  margin: 10px 0 0;
+  width: 100%;
+  font-size: 13px;
+  line-height: 16px;
+  color: #FFFFFF;
+  padding: 15px;
+  background-color: #2F2F2F;
+  border-radius: 8px;
+}
+
+.sign__form-button {
+  margin: 70px 0 0;
+  width: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  padding: 15px 0;
+  background: #4285F4;
+  border-radius: 3px;
+}
+
+.sign__form-button_login {
+  margin: 180px 0 0;
+}
+
+.sign__question {
+  margin: 15px 0 0;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #8B8B8B;
+}
+
+.sign__link {
+  display: inline;
+  color: #4285F4;
+}
+/* 
+@media screen and (max-width: 800px) {
+
+} */
+
+@media screen and (max-width: 610px) {
+  .wrapper_sign {
+    margin: 60px 30px 30px;
+  }
+
+  .sign__title {
+    margin: 50px 0 0;
+  }
+  
+  .sign__form {
+    margin: 80px 0 0;
+  }
+  
+  .sign__form-input {
+    margin: 10px 0 0;
+    width: 100%;
+    font-size: 13px;
+    line-height: 16px;
+    color: #FFFFFF;
+    padding: 15px;
+    background-color: #2F2F2F;
+    border-radius: 8px;
+  }
+  
+  .sign__form-button {
+    margin: 160px 0 0;
+    width: 100%;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    padding: 15px 0;
+    background: #4285F4;
+    border-radius: 3px;
+  }
+  
+  .sign__form-button_login {
+    margin: 260px 0 0;
+  }
+  
+  .sign__question {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
