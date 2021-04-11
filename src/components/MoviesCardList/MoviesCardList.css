@@ -25,6 +25,10 @@
   border-radius: 6px;
 }
 
+.movies-cards__show-more_disable {
+  display: none;
+}
+
 @media screen and (max-width: 800px) {
   .wrapper_movies-cards {
     margin: 70px 30px 80px;
