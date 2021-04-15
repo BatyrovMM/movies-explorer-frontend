@@ -47,12 +47,12 @@
     height: 100%;
     z-index: 10;
     padding: 20px;
-    position: fixed;
+    /* position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ffffff5c;
+    background-color: #ffffff5c; */
 }
 
 .preloader_disable {

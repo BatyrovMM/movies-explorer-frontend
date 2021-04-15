@@ -41,6 +41,22 @@
   background-size: cover;
 }
 
+.search-form__error {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  width: max-content;
+  font-size: 12px;
+  line-height: 12px;
+  color: #3ddc84;
+  opacity: 1;
+  transform: translateX(-50%);
+  transition: .4s linear;
+}
+.search-form__error_disable {
+  opacity: 0;
+}
+
 .search-form__line {
   margin: 70px 0 0;
   width: 100%;

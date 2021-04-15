@@ -18,67 +18,49 @@ export class MainApi {
     .then(this._response);
   }
 
-  sendUserInfo(userName, userAbout) {
+  sendUserInfo(email, name) {
     return fetch(`${this.baseUrl}/users/me`, {
       method: 'PATCH',
       headers: this.headers,
       body: JSON.stringify({
-        name: userName,
-        about: userAbout
+        email,
+        name,
       })
     })
     .then(this._response);
   }
 
-  sendUserAvatar(userAvatar) {
-    return fetch(`${this.baseUrl}/users/me/avatar`, {
-      method: 'PATCH',
-      headers: this.headers,
-      body: JSON.stringify({
-        avatar: userAvatar
-      })
-    })
-    .then(this._response);
-  }
-
-  getInitialCards() {
-    return fetch(`${this.baseUrl}/cards`, {
+  getSavedMovies() {
+    return fetch(`${this.baseUrl}/movies`, {
       method: 'GET',
       headers: this.headers,
     })
     .then(this._response);
   }
 
-  postNewCard(cardName, cardLink) {
-    return fetch(`${this.baseUrl}/cards`, {
+  saveNewMovie(data) {
+    return fetch(`${this.baseUrl}/movies`, {
       method: 'POST',
       headers: this.headers,
       body: JSON.stringify({
-        name: cardName,
-        link: cardLink
+        country: data.country,
+        director: data.director,
+        duration: data.duration,
+        year: data.year,
+        description: data.description,
+        nameRU: data.nameRU,
+        nameEN: data.nameEN,
+        thumbnail: `https://api.nomoreparties.co${data.image.formats.thumbnail.url}`,
+        trailer: data.trailerLink,
+        image: `https://api.nomoreparties.co${data.image.url}`, 
+        movieId: data.id,
       })
     })
     .then(this._response);
   }
 
-  deleteCard(cardId) {
-    return fetch(`${this.baseUrl}/cards/${cardId}`, {
-      method: 'DELETE',
-      headers: this.headers,
-    })
-    .then(this._response);
-  }
-
-  addLike(cardId) {
-    return fetch(`${this.baseUrl}/cards/${cardId}/likes`, {
-      method: 'PUT',
-      headers: this.headers,
-    })
-    .then(this._response);
-  }
-  
-  removeLike(cardId) {
-    return fetch(`${this.baseUrl}/cards/${cardId}/likes`, {
+  deleteNewMovie(_id) {
+    return fetch(`${this.baseUrl}/movies/${_id}`, {
       method: 'DELETE',
       headers: this.headers,
     })

@@ -1,11 +1,30 @@
 import React from 'react';
 import './MoviesCard.css';
 
-function MoviesCard({ isSaved, nameRU, duration, image, trailerLink }) {
-  const [isLike, setisLike] = React.useState(false);
+function MoviesCard({ isSaved, id, _id, nameRU, duration, image, trailerLink, trailer, checkLike, handleLikeClick, handleDislikeClick }) {
+  const isLike = () => {
+    return checkLike.some(item => item.movieId === id)
+  };
+
+  const imageState = () => {
+    if (typeof image === 'object') {
+      return image === null ? `` : `https://api.nomoreparties.co${image.url}`;
+    }
+    if (typeof image === 'string') {
+      return image;
+    }
+  } 
 
   function handleLike() {
-    setisLike(!isLike);
+    handleLikeClick(id)
+  }
+
+  function handleDislike() {
+    if (id) {
+      handleDislikeClick(id)
+    } else if (_id) {
+      handleDislikeClick(_id)
+    }
   }
 
   function convertDuration(number) {
@@ -22,18 +41,18 @@ function MoviesCard({ isSaved, nameRU, duration, image, trailerLink }) {
 
   if (isSaved) {
     saveState = (
-      <button className="movies-card__delete"></button>
+      <button onClick={handleDislike} className="movies-card__delete"></button>
     )
   } else {
     saveState = (
-        <button onClick={handleLike} className={`movies-card__likes ${isLike ? 'movies-card__likes_active' : ''}`}></button>
+        <button onClick={!isLike() ? handleLike : handleDislike} className={`movies-card__likes ${isLike() ? 'movies-card__likes_active' : ''}`}></button>
     )
   }
 
   return (
     <div className="movies-card">
-      <a href={trailerLink} target="_blank" rel="noreferrer" className="movies-card__link">
-        <img className="movies-card__image" src={image === null ? `` : `https://api.nomoreparties.co${image.url}`} alt={nameRU}/>
+      <a href={trailerLink || trailer} target="_blank" rel="noreferrer" className="movies-card__link">
+        <img className="movies-card__image" src={imageState()} alt={nameRU}/>
       </a>
       <div className="movies-card__info">
         <div className="movies-card__info-top">

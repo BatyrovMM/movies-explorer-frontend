@@ -1,7 +1,10 @@
 /* .sign {
 
 } */
-
+p {
+  font-size: 10px;
+  margin: 10px 0;
+}
 .wrapper_sign {
   max-width: 400px;
   margin: 70px auto;
@@ -57,10 +60,26 @@
   padding: 15px 0;
   background: #4285F4;
   border-radius: 3px;
+  pointer-events: all;
+}
+
+.sign__form-button_disabled {
+  background: #8B8B8B;
+  pointer-events: none;
 }
 
 .sign__form-button_login {
   margin: 180px 0 0;
+}
+
+.sign__form-errors {
+  margin: 5px 0 0;
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-size: 11px;
+  line-height: 100%;
+  color: #3ddc84;
 }
 
 .sign__question {

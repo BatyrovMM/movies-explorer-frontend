@@ -7,10 +7,10 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import './Main.css';
 
-function Main() {
+function Main({ loggedIn, handleMenu }) {
   return (
     <>
-    <Header onPage={'/'}/>
+    <Header onPage={loggedIn ? false : '/'} handleTheme={true} handleMenu={handleMenu}/>
     <Promo />
     <AboutProject />
     <Techs />
