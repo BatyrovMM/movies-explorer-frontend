@@ -1,15 +1,15 @@
 export const BASE_URL = 'https://batyrov.m.m.students.nomoreparties.space';
 
-const responseCheck = (res) => res.ok ? res.json() : Promise.reject(`Тут вам не MESTO! Поняли? А? А? Ладно, дело в ошибке и вот её код ${res.status}`);
+const responseCheck = (res) => res.ok ? res.json() : Promise.reject(`Синефил, у нас проблема - ${res.status}`);
 
-export const signup = (email, password) => {
+export const signup = (email, password, name) => {
   return fetch(`${BASE_URL}/signup`, {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ email, password }),
+    body: JSON.stringify({ email, password, name }),
   })
   .then(responseCheck)
 };

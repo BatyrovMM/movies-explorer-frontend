@@ -1,5 +1,4 @@
 import './AboutMe.css';
-import zaglushka from '../../images/zaglushka.jpg';
 
 function AboutMe() {
   return (
@@ -19,7 +18,7 @@ function AboutMe() {
                 <a target="_blank" rel="noreferrer" href="https://github.com/BatyrovMM" className="about-me__link">Github</a>
               </div>
             </div>
-            <img src={zaglushka} alt="zaglushka" className="about-me__image"/>
+            <img src={``} alt="" className="about-me__image"/>
           </div>
         </div>
       </section>

@@ -58,6 +58,11 @@
   text-align: center;
 }
 
+.profile__form-edit_disabled {
+  opacity: .3;
+  pointer-events: none;
+}
+
 .profile__exit {
   margin: 15px auto 0;
   width: fit-content;

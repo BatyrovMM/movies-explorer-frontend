@@ -3,7 +3,7 @@ import headerLogo from '../../images/section__logo.png';
 import NavTab from '../NavTab/NavTab';
 import './Header.css';
 
-function Header({onPage, handleMenu}) {
+function Header({onPage, handleTheme, handleMenu}) {
   let whatPage;
 
   if (onPage === '/') {
@@ -24,7 +24,7 @@ function Header({onPage, handleMenu}) {
 
   return (
     <>
-      <header className={`header ${onPage === '/' ? '' : 'header_main'}`}>
+      <header className={`header ${handleTheme ? '' : 'header_main'}`}>
         <div className="wrapper wrapper_header">
           <Link to='/'>
             <img className="header__logo" src={headerLogo} alt="logotype"/>
